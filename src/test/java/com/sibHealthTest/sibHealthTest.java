@@ -48,6 +48,7 @@ public class sibHealthTest {
         $(byText("Оформить заказ")).waitUntil(visible, 1000).click();
         $(By.id("field-userLoginNameCart")).val("2031342617");
         $(By.id("field-userLoginPassCart")).val("TZ887715");
+        //testtstststs commit
 
 
     }
