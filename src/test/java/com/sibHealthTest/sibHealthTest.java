@@ -39,17 +39,20 @@ public class sibHealthTest {
     @Test
     public void test()
     {
+        long timeout_def = 10000;
 
         open("https://ru.siberianhealth.com/ru/");
-        $(By.cssSelector("#navbar_main__collapse > ul:nth-child(1) > li:nth-child(2) > a")).waitUntil(visible,1000).click();
-        $(byText("Масло-скульптор")).waitUntil(visible, 1000).click();
-        $(By.cssSelector("[ng-if] .product-spinner-button__container .ng-binding")).waitUntil(visible, 1000).click();
-        $(By.cssSelector("#navbar_main > div.navbar_main__top > div.navbar_main__inner-container > div > a")).waitUntil(appears, 1000).click();
-        $(byText("Оформить заказ")).waitUntil(visible, 1000).click();
-        $(By.id("field-userLoginNameCart")).val("2031342617");
-        $(By.id("field-userLoginPassCart")).val("TZ887715");
-        //testtstststs commit
-        //gdfgdfgdfg
+        $(By.cssSelector("#navbar_main__collapse > ul:nth-child(1) > li:nth-child(2) > a")).waitUntil(visible,timeout_def).click();
+        $(byText("Масло-скульптор")).waitUntil(visible, timeout_def).click();
+        $(By.cssSelector("[ng-if] .product-spinner-button__container .ng-binding")).waitUntil(visible, timeout_def).click();
+        $(By.cssSelector("#navbar_main > div.navbar_main__top > div.navbar_main__inner-container > div > a")).waitUntil(appears, timeout_def).click();
+        $(byText("Оформить заказ")).waitUntil(visible, timeout_def).click();
+        $(byName("userLoginNameCart")).waitUntil(appears, timeout_def).click();
+        $(byId("field-userLoginNameCart")).waitUntil(visible, timeout_def).val("2031342617");
+        $(By.name("userLoginPassCart")).waitUntil(appears, timeout_def).click();
+        $(By.name("userLoginPassCart")).waitUntil(visible, timeout_def).sendKeys("TZ887715");
+        $(byText("Войти")).waitUntil(visible, timeout_def).click();
+        $(byText("Самовывоз")).exists();
 
 
     }
