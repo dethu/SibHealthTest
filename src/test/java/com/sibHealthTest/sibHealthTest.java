@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.Configuration.browserSize;
-import  static com.codeborne.selenide.Selenide.*;
+
 
 import static com.codeborne.selenide.Configuration.*;
 import static org.junit.Assert.assertTrue;
@@ -49,6 +49,7 @@ public class sibHealthTest {
         $(By.id("field-userLoginNameCart")).val("2031342617");
         $(By.id("field-userLoginPassCart")).val("TZ887715");
         //testtstststs commit
+        //gdfgdfgdfg
 
 
     }
